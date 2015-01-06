@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Ak  Availability
+ * This module is displaying  product availability in catalog .
+ * @category    Ak
+ * @package     Ak_Availability
+ */
+
+/**
+ * Ak  Availability
+ *
+ * @category   Ak
+ * @package    Ak_Availability
+ * @author     Adesh Kumar <adeshsuryan2005@gmail.com>
+ */
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<placeholders>
+    <ak_catalog_product_product_labels_availability>
+        <block>availability/catalog_product</block>
+        <name>product_labels</name>
+        <template>ak/availability/catalog/product.phtml</template>
+        <placeholder>product_labels_availability</placeholder>
+        <container>Ak_Availability_Block_Catalog_Product</container>
+        <cache_lifetime>86400</cache_lifetime>
+    </ak_catalog_product_product_labels_availability>
+</placeholders>
+</config>

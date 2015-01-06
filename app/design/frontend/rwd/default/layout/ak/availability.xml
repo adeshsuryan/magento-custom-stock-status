@@ -5,7 +5,7 @@
             <action method="addItem"><type>skin_css</type><name>css/ak/availability.css</name></action>
         </reference>
         <reference name="product.info.media">
-            <block type="labels/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
+            <block type="availability/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
         </reference>
     </catalog_product_view>
 
@@ -14,7 +14,7 @@
             <action method="addItem"><type>skin_css</type><name>css/ak/availability.css</name></action>
         </reference>
         <reference name="product_list">
-            <block type="labels/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
+            <block type="availability/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
         </reference>
     </catalog_category_default>
 
@@ -23,7 +23,37 @@
             <action method="addItem"><type>skin_css</type><name>css/ak/availability.css</name></action>
         </reference>
         <reference name="product_list">
-            <block type="labels/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
+            <block type="availability/catalog_product" name="product_labels" template="ak/availability/catalog/product.phtml"/>
         </reference>
     </catalog_category_layered>
+    <PRODUCT_TYPE_simple translate="label"  module="catalog">
+        <reference name="product.info.simple">
+            <action method="setTemplate"><template>ak/availability/catalog/default.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_simple>
+    <PRODUCT_TYPE_configurable translate="label" module="catalog">
+        <reference name="product.info.configurable">
+            <action method="setTemplate"><template>ak/availability/catalog/default.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+    <PRODUCT_TYPE_grouped translate="label" module="catalog">
+        <reference name="product.info.grouped">
+            <action method="setTemplate"><template>ak/availability/catalog/grouped.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_grouped>
+    <PRODUCT_TYPE_virtual translate="label" module="catalog">
+        <reference name="product.info.virtual">
+            <action method="setTemplate"><template>ak/availability/catalog/default.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_virtual>
+    <PRODUCT_TYPE_bundle translate="label" module="bundle">
+        <reference name="product.info.bundle">
+            <action method="setTemplate"><template>ak/availability/catalog/default.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_bundle>
+    <PRODUCT_TYPE_downloadable translate="label" module="downloadable">
+        <reference name="product.info.downloadable">
+            <action method="setTemplate"><template>ak/availability/catalog/default.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_downloadable>
 </layout>

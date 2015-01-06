@@ -18,12 +18,23 @@ class Ak_Availability_Block_Catalog_Product extends Mage_Core_Block_Template
 {
     protected $_product;
 	
-	public function __construct()
+	/*
+	  public function __construct()
 	 {
 		$this->addData(array(
 		'cache_lifetime' => null,       
 	   ));
 	 }
+	*/
+    protected function _getCacheId()
+    {
+        return 'Ak_Availability_Block_Catalog_Product' . $this->_getIdentifier();
+    }
+
+    protected function _getIdentifier()
+    {
+        return microtime();
+    }
 
     public function setProduct($product)
     {
@@ -117,5 +128,10 @@ class Ak_Availability_Block_Catalog_Product extends Mage_Core_Block_Template
         }
 
         return $locationClass;
+    }
+
+    protected function _saveCache($data, $id, $tags = array(), $lifetime = null)
+    {
+        return false;
     }
 } 
