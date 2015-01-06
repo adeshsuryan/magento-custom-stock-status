@@ -1,0 +1,51 @@
+<?php
+/**
+ * Ak  Availability
+ * This module is displaying  product availability in catalog .
+ * @category    Ak
+ * @package     Ak_Availability
+ */
+
+/**
+ * Ak  Availability
+ *
+ * @category   Ak
+ * @package    Ak_Availability
+ * @author     Adesh Kumar <adeshsuryan2005@gmail.com>
+ */
+
+/**
+ * To use in product listing or product view media call
+ * echo $this->getChild('product_labels')->setProduct($product)->toHtml();
+ * from catalog/product/list.phtml 
+ * or 
+ * from catalog/product/view/media.phtml
+ * 
+ * To use in another page add this template at page layout
+ */
+?>
+	<?php $locationClass = $this->getLocationClass(); ?>
+	<div class='product-label <?php echo $locationClass ?>'>
+	<ul>
+
+<?php if ($this->isStocksAvailable()): ?>
+	<?php /* Instock product */ ?>
+	<?php $newStyle = "background:" . $this->getInBackgroundColor() . "; color:" . $this->getInTextColor() . ";" ?>
+	<li class="label" style="<?php echo $newStyle ?>">
+		<span><?php echo $this->getInStockText() ?></span>
+		<span class="arrow l-arrow" style="border-top:5px solid <?php echo $this->getInBackgroundColor() ?>;">&nbsp;</span>
+		<span class="arrow rt-arrow" style="border-top:20px solid <?php echo $this->getInBackgroundColor() ?>;">&nbsp;</span>
+		<span class="arrow rb-arrow" style="border-bottom:20px solid <?php echo $this->getInBackgroundColor() ?>;">&nbsp;</span>
+	</li>
+	<?php else: ?>
+	<?php /* Out of stock product */ ?>
+		<?php $newStyle = "background:" . $this->getOutBackgroundColor() . "; color:" . $this->getOutTextColor() . ";" ?>
+	<li class="label" style="<?php echo $newStyle ?>">
+		<span><?php echo $this->getOutStockText() ?></span>
+		<span class="arrow l-arrow" style="border-top:5px solid <?php echo $this->getOutBackgroundColor() ?>;">&nbsp;</span>
+		<span class="arrow rt-arrow" style="border-top:20px solid <?php echo $this->getOutBackgroundColor() ?>;">&nbsp;</span>
+		<span class="arrow rb-arrow" style="border-bottom:20px solid <?php echo $this->getOutBackgroundColor() ?>;">&nbsp;</span>
+	</li>
+<?php endif; ?>
+	</ul>
+	</div>

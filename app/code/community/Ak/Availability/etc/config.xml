@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Ak  Availability
+ * This module is displaying  product availability in catalog .
+ * @category    Ak
+ * @package     Ak_Availability
+ */
+
+/**
+ * Ak  Availability
+ *
+ * @category   Ak
+ * @package    Ak_Availability
+ * @author     Adesh Kumar <adeshsuryan2005@gmail.com>
+ */
+-->
+<config>
+    <modules>
+        <Ak_Availability>
+            <version>0.1.0</version>
+        </Ak_Availability>
+    </modules>
+    <adminhtml>
+        <layout>
+            <updates>
+                <availability>
+                    <file>ak/availability.xml</file>
+                </availability>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <availability>
+                                            <title>Ak Availability</title>
+                                        </availability>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <Ak_Availability>
+                    <files>
+                        <default>Ak_Availability.csv</default>
+                    </files>
+                </Ak_Availability>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <availability module="Ak_Availability">
+                    <file>ak/availability.xml</file>
+                </availability>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <availability>
+                <class>Ak_Availability_Block</class>
+            </availability>
+        </blocks>
+        <helpers>
+            <availability>
+                <class>Ak_Availability_Helper</class>
+            </availability>
+        </helpers>
+        <models>
+            <availability>
+                <class>Ak_Availability_Model</class>
+            </availability>
+        </models>
+
+        <resources>
+            <availability_setup>
+                <setup>
+                    <module>Ak_Availability</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </availability_setup>
+            <availability_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </availability_write>
+            <availability_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </availability_read>
+        </resources>
+    </global>
+    <default>
+        <availability>
+            <general>
+                <location>10</location>
+            </general>
+            <availability_label>
+                <enabled>1</enabled>
+                <instock_text>In stock</instock_text>
+				<outstock_text>Out of stock</outstock_text>
+                <in_background_color>00ad5d</in_background_color>
+				<out_background_color>00ad5d</out_background_color>
+                <in_text_color>ffffff</in_text_color>
+				<out_text_color>ffffff</out_text_color>
+            </availability_label>
+        </availability>
+    </default>
+</config>

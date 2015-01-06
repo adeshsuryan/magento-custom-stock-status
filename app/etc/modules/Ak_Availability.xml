@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Ak  Availability
+ * This module is displaying  product availability in catalog .
+ * @category    Ak
+ * @package     Ak_Availability
+ */
+
+/**
+ * Ak  Availability
+ *
+ * @category   Ak
+ * @package    Ak_Availability
+ * @author     Adesh Kumar <adeshsuryan2005@gmail.com>
+ */
+-->
+<config>
+    <modules>
+        <Ak_Availability>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ak_Availability>
+    </modules>
+</config>

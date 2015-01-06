@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Ak  Availability
+ * This module is displaying  product availability in catalog .
+ * @category    Ak
+ * @package     Ak_Availability
+ */
+
+/**
+ * Ak  Availability
+ *
+ * @category   Ak
+ * @package    Ak_Availability
+ * @author     Adesh Kumar <adeshsuryan2005@gmail.com>
+ */
+-->
+<config>
+    <tabs>
+        <ak translate="label" module="availability">
+            <label>AK Extensions</label>
+            <sort_order>300</sort_order>
+        </ak>
+    </tabs>
+    <sections>
+        <availability translate="label" module="availability">
+            <label>Availability</label>
+            <tab>ak</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="availability">
+                    <label>Availability general settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <location translate="label comment">
+                            <label>Availability location</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>labels/config_location</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </location>
+                    </fields>
+                </general>
+                <availability_label translate="label" module="availability">
+                    <label>Availability Label</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <instock_text translate="label comment">
+                            <label>Text</label>
+                            <comment><![CDATA[Text that will be on the In Stock label]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </instock_text>
+						<outstock_text translate="label comment">
+                            <label>Text</label>
+                            <comment><![CDATA[Text that will be on the Out of stock label]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </outstock_text>
+                        <in_background_color translate="label comment">
+                            <label>In Stock label background color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </in_background_color>
+						<out_background_color translate="label comment">
+                            <label>Out of Stock label background color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </out_background_color>
+                        <in_text_color translate="label comment">
+                            <label>In Stock  label text color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </in_text_color> 
+						<out_text_color translate="label comment">
+                            <label>Out of Stock label text color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </out_text_color> 
+                    </fields>
+                </availability_label>
+            </groups>
+        </availability>
+    </sections>
+</config>
