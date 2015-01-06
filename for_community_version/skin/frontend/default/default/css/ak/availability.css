@@ -1,0 +1,71 @@
+/* -------------------------------------------- *
+ * START: Ak_Availability (ak) */
+.product-label { position:absolute; top:0; left:0; /*width:100%;*/ opacity:0.8; }
+.product-label .label { text-align:center; position:relative; min-width:90px; margin:4px 0 4px -8px; color:#fff; font-size:13px; }
+.product-label .label span { display:block; padding:7px 15px; }
+.product-label .label .arrow { position:absolute; }
+.product-label .label .l-arrow,
+.product-label .label .rt-arrow,
+.product-label .label .rb-arrow { width:0; height:0; font-size:0; padding:0; }
+.product-label .label .l-arrow { border-left:8px solid transparent; }
+.product-label .label .rt-arrow,
+.product-label .label .rb-arrow { right:-9px; border-right:10px solid transparent; }
+.product-label .label .l-arrow { bottom:-5px; }
+.product-label .label .rt-arrow { top:0; }
+.product-label .label .rb-arrow { bottom:0; }
+.product-label .sale,
+.product-label .sale .arrow { background:#f24841; }
+.product-label .sale .l-arrow { border-top:5px solid #a6332d; }
+.product-label .sale .rt-arrow { border-top:20px solid #f24841; }
+.product-label .sale .rb-arrow { border-bottom:20px solid #f24841; }
+.product-label .new,
+.product-label .new .arrow { background:#00ad5d; }
+.product-label .new .l-arrow { border-top:5px solid #006134; }
+.product-label .new .rt-arrow { border-top:20px solid #00ad5d; }
+.product-label .new .rb-arrow { border-bottom:20px solid #00ad5d; }
+.product-label .featured,
+.product-label .featured .arrow { background:#3399cc; }
+.product-label .featured .l-arrow { border-top:5px solid #206080; }
+.product-label .featured .rt-arrow { border-top:20px solid #3399cc; }
+.product-label .featured .rb-arrow { border-bottom:20px solid #3399cc; }
+
+.product-label .sale .l-arrow,
+.product-label .sale .rt-arrow,
+.product-label .sale .rb-arrow,
+.product-label .new .l-arrow,
+.product-label .new .rt-arrow,
+.product-label .new .rb-arrow,
+.product-label .featured .l-arrow,
+.product-label .featured .rt-arrow,
+.product-label .featured .rb-arrow { background:none transparent; }
+
+.products-grid .product-label .label { width:78px; font-size:12px; }
+.products-grid .product-label .label span { padding:2px 8px; }
+.products-grid .product-label .label .arrow { padding:0; }
+
+.product-essential { /*position:relative;*/ }
+.product-img-box { position:relative; }
+
+/* START: Ak_Availability adding position option (ak) */
+.pl-top-left { top:0; left:0; right:auto; bottom:auto; }
+.pl-top-right { top:0; right:0; left:auto; bottom:auto; }
+.pl-bottom-left { bottom:4px; left:0; top:auto; right:auto; }
+.pl-bottom-right { bottom:4px; right:0; top:auto; left:auto; }
+
+.pl-top-right .label { margin-left:0; margin-right:-8px; }
+.pl-bottom-right .label { margin-left:0; margin-right:-8px; }
+.pl-top-right .label .rt-arrow,
+.pl-top-right .label .rb-arrow,
+.pl-bottom-right .label .rt-arrow,
+.pl-bottom-right .label .rb-arrow { left:-9px; border-left:10px solid transparent; border-right:0 none; }
+.pl-top-right .label .l-arrow { right:0; left:auto; border-right:8px solid transparent; border-left:0 none; }
+.pl-bottom-right .label .l-arrow { right:0; left:auto; border-right:8px solid transparent; border-left:0 none; }
+
+/*.product-img-box .pl-top-right,
+.product-img-box .pl-bottom-right { right:15px; }
+.product-img-box .pl-bottom-left,
+.product-img-box .pl-bottom-right { bottom:140px; }*/
+/* END: Ak_Availability adding position option (ak) */
+  
+/* END: Ak_Availability (ak)
+ * -------------------------------------------- /
